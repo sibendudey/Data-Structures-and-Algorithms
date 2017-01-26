@@ -1,20 +1,22 @@
 package trees.and.graphs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Graph {
 	public int vertices;
-	public ArrayList<Integer> adjacencyList[];
+	public LinkedList<Integer> adjList[];
 	
-	Graph(int vertices){
+	public Graph(int vertices)	{
 		this.vertices = vertices;
-		adjacencyList = new ArrayList[vertices];
+		adjList = new LinkedList[vertices];
 		for ( int i = 0 ; i < vertices ; i++)	{
-			adjacencyList[i] = new ArrayList<Integer>();
+			adjList[i] = new LinkedList<Integer>();
 		}
 	}
 	
-	public void addEdge( int source , int end)	{
-		adjacencyList[source].add(end);
+	public void addEdge(int v1 , int v2)	{
+		adjList[v1].add(v2);
 	}
+
 }

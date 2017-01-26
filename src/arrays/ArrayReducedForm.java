@@ -20,6 +20,8 @@ public class ArrayReducedForm {
 			arr[iterator] = index;
 		}
 		
+		int[][] arr1 = new int[2][3];
+		
 		printReducedForm(arr);
 	}
 
