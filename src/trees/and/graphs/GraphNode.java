@@ -6,6 +6,7 @@ public class GraphNode {
 	int data;
 	ArrayList<GraphNode> edges;
 	
+	
 	public GraphNode(int data)	{
 		this.data = data;
 	}
