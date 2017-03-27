@@ -1,11 +1,7 @@
 package com.hackerrank.stacks;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 class StackWrapper {
 	Stack<Integer> stackA = new Stack<>();

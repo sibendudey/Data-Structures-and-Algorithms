@@ -1,16 +1,15 @@
 package strings;
 
-import java.io.IOException;
-import java.util.Scanner;
-
-import javax.xml.parsers.DocumentBuilder;
-
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class GemStones {
 

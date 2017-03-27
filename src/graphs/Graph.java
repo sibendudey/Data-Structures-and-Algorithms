@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Utility class Graph to store the contents of structure of the Graph
  * Created by deysi on 3/24/2017.
  */
 public class Graph	{
-    List<Edge> edgesList;
-    int vertices;
+    private List<Edge> edgesList;
+    private int vertices , edges;
 
     public int getVertices() {
         return vertices;
@@ -22,9 +23,7 @@ public class Graph	{
         this.edgesList = edgesList;
     }
 
-    int edges;
-
-    Graph(int vertices , int edges){
+    public Graph(int vertices , int edges){
         this.vertices = vertices;
         this.edges = edges;
         edgesList = new ArrayList<Edge>(edges);

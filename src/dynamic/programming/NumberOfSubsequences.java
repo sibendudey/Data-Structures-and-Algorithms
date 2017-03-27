@@ -21,7 +21,7 @@ public class NumberOfSubsequences {
 	
 	private static void printLongest(int[] arr) {
 		// TODO Auto-generated method stub
-		Integer.va
+
 		int length = arr.length;
 		int numberOfSubsequences[][] = new int[length][length+1];
 		for ( int i = 0 ; i < length ; i++){

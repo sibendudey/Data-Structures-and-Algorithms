@@ -1,10 +1,9 @@
 package trees.and.graphs;
 
 import java.util.HashMap;
-//import java.util.HashSet;
-import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
+
+//import java.util.HashSet;
 
 public class VerticalSizeTree {
 	

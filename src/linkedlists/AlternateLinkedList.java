@@ -1,8 +1,5 @@
 package linkedlists;
 
-import java.util.LinkedList;
-
-
 public class AlternateLinkedList {
 	
 	public static void main(String args[])	{
