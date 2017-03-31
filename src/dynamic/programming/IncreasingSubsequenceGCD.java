@@ -10,8 +10,7 @@ public class IncreasingSubsequenceGCD {
 
 	}
 
-	private static void printLongest(int[] arr) {
-		// TODO Auto-generated method stub
+	private static void printLongest(int[] arr)	{
 		int length = arr.length;
 		int gcd[] = new int[arr.length];
 		for ( int i = 0 ; i < length ; i++){

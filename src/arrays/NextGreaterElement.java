@@ -14,7 +14,6 @@ public class NextGreaterElement {
 		// TODO Auto-generated method stub
 		Stack<Integer> stack = new Stack<Integer>();
 		stack.push(arr[0]);
-		k
 		for ( int i = 1; i < arr.length  ; i++)	{
 			while ( !stack.empty())	{
 				int temp = stack.pop();
