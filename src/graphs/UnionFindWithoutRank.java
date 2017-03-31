@@ -1,6 +1,5 @@
 package graphs;
 
-import java.util.Scanner;
 /**
  * Created by deysi on 3/24/2017.
  */
@@ -10,7 +9,7 @@ public class UnionFindWithoutRank {
 
     public static void main(String args[])  {
 
-       Graph graph = GraphUtility.createGraph();
+       Graph graph = GraphBuilder.createGraph();
 
         if (findCycle( graph ) == true)
             System.out.println("Cycle");

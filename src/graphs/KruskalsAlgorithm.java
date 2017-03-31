@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.L;
-
 /**
  * Created by deysi on 3/24/2017.
  */
@@ -16,7 +14,7 @@ public class KruskalsAlgorithm {
     public static void main(String args[])  {
 
 
-        Graph graph = GraphUtility.createGraphWithWeight();
+        Graph graph = GraphBuilder.createGraphWithWeight();
 
 
         // Sort the edges based on weight

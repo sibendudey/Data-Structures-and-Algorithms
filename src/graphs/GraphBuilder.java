@@ -5,9 +5,9 @@ import java.util.Scanner;
 /**
  * Created by deysi on 3/24/2017.
  */
-public class GraphUtility {
+public class GraphBuilder {
 
-    public static Graph createGraph()   {
+    public static Graph createGraph() {
 
         Scanner sc = new Scanner(System.in);
 
@@ -16,21 +16,21 @@ public class GraphUtility {
         System.out.println("Enter no of edges");
         int noOfEdges = sc.nextInt();
 
-        Graph graph = new Graph(noOfVertices,noOfEdges);
+        Graph graph = new Graph(noOfVertices, noOfEdges);
 
-        for ( int i = 0 ; i < noOfEdges ; i++)  {
+        for (int i = 0; i < noOfEdges; i++) {
             System.out.println("Enter source");
             int srcEdge = sc.nextInt();
             System.out.println("Enter destination");
             int destEdge = sc.nextInt();
 
-            graph.getEdgesList().add(new Edge(srcEdge , destEdge));
+            graph.getEdgesList().add(new Edge(srcEdge, destEdge));
         }
 
-        return  graph;
+        return graph;
     }
 
-    public static Graph createGraphWithWeight()   {
+    public static Graph createGraphWithWeight() {
 
         Scanner sc = new Scanner(System.in);
 
@@ -39,9 +39,9 @@ public class GraphUtility {
         System.out.println("Enter no of edges");
         int noOfEdges = sc.nextInt();
 
-        Graph graph = new Graph(noOfVertices,noOfEdges);
+        Graph graph = new Graph(noOfVertices, noOfEdges);
 
-        for ( int i = 0 ; i < noOfEdges ; i++)  {
+        for (int i = 0; i < noOfEdges; i++) {
 
             //System.out.println("Enter source");
             int srcEdge = sc.nextInt();
@@ -52,9 +52,9 @@ public class GraphUtility {
             //System.out.println("Enter weight");
             int weight = sc.nextInt();
 
-            graph.getEdgesList().add(new Edge(srcEdge , destEdge , weight));
+            graph.getEdgesList().add(new Edge(srcEdge, destEdge, weight));
         }
 
-        return  graph;
+        return graph;
     }
 }
