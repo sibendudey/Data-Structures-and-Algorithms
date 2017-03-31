@@ -1,6 +1,7 @@
 package graphs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,6 +11,8 @@ import java.util.List;
 public class Graph	{
     private List<Edge> edgesList;
     private int vertices , edges;
+
+    private LinkedList<Integer> adjList[];
 
     public int getVertices() {
         return vertices;
@@ -29,8 +32,18 @@ public class Graph	{
         edgesList = new ArrayList<Edge>(edges);
     }
 
+    public Graph ( int vertices , int edges , LinkedList<Integer> adjList[] )   {
+        this.vertices = vertices;
+        this.edges = edges;
+        this.adjList = adjList;
+    }
+
     public List<Edge> getEdgesList(){
         return edgesList;
+    }
+
+    public LinkedList<Integer>[] getAdjList() {
+        return adjList;
     }
 
 }
