@@ -78,9 +78,10 @@ public class GraphBuilder {
             int destEdge = sc.nextInt();
 
             //System.out.println("Enter weight");
-            int weight = sc.nextInt();
+            //int weight = sc.nextInt();
 
-            graph.getEdgesList().add(new Edge(srcEdge , destEdge , weight));
+            //graph.getEdgesList().add(new Edge(srcEdge , destEdge , weight));
+            graph.addEdge(srcEdge , destEdge);
         }
 
         return  graph;

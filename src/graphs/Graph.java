@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Utility class Graph to store the contents of structure of the Graph
- * Created by deysi on 3/24/2017.
+ * Created by Sibendu on 3/24/2017.
  */
 public class Graph	{
     private List<Edge> edgesList;
@@ -32,11 +32,11 @@ public class Graph	{
         edgesList = new ArrayList<Edge>(edges);
     }
 
-    public Graph ( int vertices , int edges , LinkedList<Integer> adjList[] )   {
+    /*public Graph ( int vertices , int edges , LinkedList<Integer> adjList[] )   {
         this.vertices = vertices;
         this.edges = edges;
         this.adjList = adjList;
-    }
+    }*/
 
     public List<Edge> getEdgesList(){
         return edgesList;
@@ -44,6 +44,17 @@ public class Graph	{
 
     public LinkedList<Integer>[] getAdjList() {
         return adjList;
+    }
+
+    public void addEdge( int source , int destination)  {
+
+        if ( adjList == null)
+            adjList = new LinkedList[vertices];
+
+        if ( adjList[source] == null)
+            adjList[source] = new LinkedList<>();
+
+        adjList[source].add(destination);
     }
 
 }
