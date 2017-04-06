@@ -5,7 +5,7 @@ import graphs.Graph;
 import graphs.GraphBuilder;
 
 /**
- * Created by deysi on 3/31/2017.
+ * Created by Sibendu Dey on 3/31/2017.
  */
 public class DijkstraShortestPath {
 

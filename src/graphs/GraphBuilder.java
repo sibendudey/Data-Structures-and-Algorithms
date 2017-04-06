@@ -57,4 +57,33 @@ public class GraphBuilder {
 
         return graph;
     }
+
+    public static Graph createGraphWithWeightAndAdjacencyList()   {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter no of vertices");
+        int noOfVertices = sc.nextInt();
+        System.out.println("Enter no of edges");
+        int noOfEdges = sc.nextInt();
+
+        Graph graph = new Graph(noOfVertices,noOfEdges);
+
+        for ( int i = 0 ; i < noOfEdges ; i++)  {
+
+            //System.out.println("Enter source");
+            int srcEdge = sc.nextInt();
+
+            //System.out.println("Enter destination");
+            int destEdge = sc.nextInt();
+
+            //System.out.println("Enter weight");
+            //int weight = sc.nextInt();
+
+            //graph.getEdgesList().add(new Edge(srcEdge , destEdge , weight));
+            graph.addEdge(srcEdge , destEdge);
+        }
+
+        return  graph;
+    }
 }
