@@ -6,7 +6,7 @@ package graphs.geeksforgeeks;
  * Why -> The purpose of this algorithm is to find an hamiltonian cycle where there is an back path exists from
  * source to end present in the hamiltonian path
  *
- * How -> Find an hamiltonian edge and at the end check whether there exists an edge from end to source
+ * How -> Find an hamiltonian path and at the end check whether there exists an edge from end to source
  *
  * Applicable -> This algorithm applies to Directed Graphs
  *
@@ -40,7 +40,6 @@ public class HamiltonianCycle {
     private static void findHAMCycle(int[][] adjacencyList) {
 
         int numberOfVertices = adjacencyList.length;
-
         int [] path = new int[adjacencyList.length];
         boolean visited[] = new boolean[adjacencyList.length];
 
