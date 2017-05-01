@@ -2,16 +2,18 @@ package linkedlists;
 
 public class Node	{
 	int data;
-	Node next;
-	Node previous;
-	public Node(int data)	{
+
+	private Node next;
+	private Node previous;
+	private Node random;
+
+    public Node(int data)	{
 		this.data = data;
 	}
 	
 	public Node() {
-		// TODO Auto-generated constructor stub
+
 	}
-	
 
 	public Node getNext()	{
 		return next;
@@ -28,8 +30,17 @@ public class Node	{
 	public void setNext(Node next) {
 		this.next = next;
 	}
-	
-	public static Node createLL()	{
+
+    public Node getRandom() {
+        return random;
+    }
+
+    public void setRandom(Node random) {
+        this.random = random;
+    }
+
+
+    public static Node createLL()	{
 		Node head = new Node(1);
 		head.next = new Node(2);
 		head.next.next = new Node(3);
