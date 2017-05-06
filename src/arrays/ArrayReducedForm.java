@@ -7,7 +7,7 @@ import java.util.SortedSet;
 public class ArrayReducedForm {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int arr[] =  {5,10,40,30,20};
 		ArrayList<Integer> temp = new ArrayList<Integer>();
 		for ( int numbers : arr){
@@ -26,7 +26,7 @@ public class ArrayReducedForm {
 	}
 
 	private static void printReducedForm(int[] arr) {
-		// TODO Auto-generated method stub
+		
 		for ( int index : arr)	{
 			System.out.print(index + " ");
 		}
