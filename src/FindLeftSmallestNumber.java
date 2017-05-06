@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Stack;
 
 
@@ -5,7 +6,7 @@ public class FindLeftSmallestNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = { 1,3,0,2,5};
+		/*int arr[] = { 1,3,0,2,5};
 		Stack<Integer> stack = new Stack<Integer>();
 		stack.push(arr[0]);
 		
@@ -25,6 +26,10 @@ public class FindLeftSmallestNumber {
 				stack.push(arr[counter]);
 				System.out.print("N/A ");
 			}
+		}*/
+		Scanner sc = new Scanner(System.in);
+		for ( int i = 0 ; i < 3 ; i++)	{
+			System.out.println(sc.nextLine());
 		}
 
 	}

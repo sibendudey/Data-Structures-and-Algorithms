@@ -8,13 +8,14 @@ public class ConvertToBalancedBST {
 		Node modifiedTreeRoot = createBalancedTree(root);
 	}
 
-	private static Node modifiedTreeRoot createBalancedTree(Node root) {
+	private static Node createBalancedTree(Node root) {
 		// TODO Auto-generated method stub
 		if ( root.leftNode.data < root.data)	{
 			Node temp = root.leftNode.rightNode;
 			root.leftNode.rightNode = root;
 		}
-		
+
+		return null;
 		
 	}
 

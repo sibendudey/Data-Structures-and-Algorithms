@@ -1,7 +1,5 @@
 package strings;
 
-import trees.and.graphs.NoOfCycles;
-
 public class ConstraintStrings {
 
 	static int N = 3;
