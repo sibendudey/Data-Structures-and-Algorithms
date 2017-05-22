@@ -1,14 +1,20 @@
 package graphs;
 
 /**
- * Created by deysi on 3/24/2017.
+ * Created by Sibendu dey on 3/24/2017.
+ *
+ * Why -> To detect a cycle in a graph
+ *
+ * How -> Create subsets with all connected vertices by traversing through all the edges
+ *        and keep on doing union for two disjoint sets. At any point of time if you find two vertex of a edge
+ *        belong to a common set, it means a cycle can be formed using the edge.
+ *
+ * Time complexity ->  Finding the union operation will take upto O(V) time and total number of edges are E.
+ *                      So worst case time complexity should be O(V * E).
  */
 
 public class UnionFindWithoutRank {
-
-
     public static void main(String args[])  {
-
        Graph graph = GraphBuilder.createGraph();
 
         if (findCycle( graph ) == true)
@@ -25,26 +31,17 @@ public class UnionFindWithoutRank {
         for ( int i = 0  ; i < parent.length ; i++)
             parent[i] = -1;
 
-
         for ( int i = 0 ; i < graph.getEdges() ; i++)    {
-
             Edge edge = graph.getEdgesList().get(i);
-
             int src = edge.getSrc();
-
             int dest = edge.getDest();
-
             int srcParent = find ( parent , src);
-
             int destParent = find ( parent , dest);
-
             if ( srcParent == destParent )
                 return true;
-
             union( parent , src , dest);
-
-
         }
+
     return false;
     }
 

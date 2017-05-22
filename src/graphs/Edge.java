@@ -1,19 +1,19 @@
 package graphs;
 
 /**
- * Created by deysi on 3/24/2017.
+ * Created by Sibendu Dey on 3/24/2017.
  */
 public class Edge implements Comparable<Edge> {
 
     private int src, dest;
-    private int weight;
+    private float weight;
 
     public Edge(int src, int dest) {
         this.src = src;
         this.dest = dest;
     }
 
-    public Edge(int src, int dest, int weight) {
+    public Edge(int src, int dest, float weight) {
         this.src = src;
         this.dest = dest;
         this.weight = weight;
@@ -35,7 +35,7 @@ public class Edge implements Comparable<Edge> {
         this.dest = dest;
     }
 
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
 

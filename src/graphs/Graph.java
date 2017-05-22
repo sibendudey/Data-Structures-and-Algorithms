@@ -14,6 +14,8 @@ public class Graph	{
 
     private LinkedList<Integer> adjList[];
 
+    private LinkedList<Edge> adjListEdge[];
+
     public int getVertices() {
         return vertices;
     }
@@ -45,6 +47,9 @@ public class Graph	{
     public LinkedList<Integer>[] getAdjList() {
         return adjList;
     }
+    public LinkedList<Edge>[] getAdjListEdge() {
+        return adjListEdge;
+    }
 
     public void addEdge( int source , int destination)  {
 
@@ -55,6 +60,18 @@ public class Graph	{
             adjList[source] = new LinkedList<>();
 
         adjList[source].add(destination);
+    }
+
+    public void addEdgeWithWeight( Edge edge)   {
+
+        if ( adjListEdge == null)
+            adjListEdge = new LinkedList[vertices];
+
+        if ( adjListEdge[edge.getSrc()] == null)
+            adjListEdge[edge.getSrc()] = new LinkedList<>();
+
+        adjListEdge[edge.getSrc()].add(edge);
+
     }
 
 }
