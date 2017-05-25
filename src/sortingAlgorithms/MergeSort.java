@@ -4,13 +4,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by Sibendu Dey on 5/23/2017.
+ * Created by Sibendu Dey on 5/24/2017.
  *
- * This is an multithreaded version of Merge sort Algorithm
+ * This is a normal version of merge sort algorithm
+ *
  */
-
-public class MergeSortMultiThreaded {
-
+public class MergeSort {
     public static void main(String args[])   {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -18,14 +17,9 @@ public class MergeSortMultiThreaded {
         for ( int i = 0 ; i < N ; i++)
             arr[i] = sc.nextInt();
 
-        Thread t = new Thread(() -> {mergeSort(arr, 0 , N - 1);});
-        t.start();
-        try {
-            t.join();
-            Arrays.stream(arr).forEach( (i) -> System.out.print(i + " "));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+       mergeSort(arr, 0 , N - 1);
+
+       Arrays.stream(arr).forEach( (i) -> System.out.print(i + " "));
 
     }
 
@@ -33,19 +27,10 @@ public class MergeSortMultiThreaded {
 
         if ( i < j ) {
             int k = (i + j) / 2;
-            Thread t1 = new Thread(() -> {mergeSort(arr , i , k);});
-            Thread t2 = new Thread(() -> {mergeSort(arr, k + 1, j);});
-            t1.start();
-            t2.start();
-            try {
-                t1.join();
-                t2.join();
-                merge(arr, i, k, j);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+           mergeSort(arr , i , k);
+            mergeSort(arr, k + 1, j);
+            merge(arr, i, k, j);
         }
-
     }
 
     private static void merge(int[] arr, int i, int k, int j) {
