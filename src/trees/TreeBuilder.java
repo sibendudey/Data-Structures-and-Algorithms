@@ -8,7 +8,7 @@ package trees;
 public class TreeBuilder {
 
     public static Node createTree() {
-        
+
         Node root = new Node(1);
         root.setleftNode(new Node(2));
         root.setRightNode(new Node(3));
@@ -18,6 +18,23 @@ public class TreeBuilder {
         Node rightNode = root.getRightNode();
         rightNode.setleftNode(new Node(6));
         rightNode.setRightNode(new Node(7));
+        return root;
+    }
+
+
+    public static Node createBinarySearchTree() {
+
+        Node root = new Node(20);
+        root.setleftNode(new Node(11));
+        root.setRightNode(new Node(25));
+        Node leftNodeNode = root.getleftNode();
+        leftNodeNode.setleftNode(new Node(9));
+        leftNodeNode.setRightNode(new Node(13));
+        leftNodeNode.getRightNode().setleftNode(new Node(12));
+        Node rightNode = root.getRightNode();
+        rightNode.setleftNode(new Node(24));
+        rightNode.setRightNode(new Node(26));
+        rightNode.getRightNode().setRightNode(new Node(31));
         return root;
     }
 
