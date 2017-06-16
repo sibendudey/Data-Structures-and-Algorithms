@@ -1,4 +1,4 @@
-package trees.and.graphs;
+package trees;
 
 public class ConvertBTTToDLLInPlace {
 	static Node prev = null;
