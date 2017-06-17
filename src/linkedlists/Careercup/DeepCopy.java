@@ -8,6 +8,10 @@ import linkedlists.Node;
  * <p>
  * This is a solution to question appeared in careercup
  * Hyperlink: https://www.careercup.com/question?id=5758891578097664
+
+ *
+ * How ->
+ *
  */
 public class DeepCopy {
 

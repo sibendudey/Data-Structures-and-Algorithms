@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 /**
  * Created by Sibendu Dey on 5/23/2017.
+ *
+ * This is an multithreaded version of Merge sort Algorithm
  */
 
 public class MergeSortMultiThreaded {
