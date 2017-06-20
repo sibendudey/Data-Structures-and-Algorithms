@@ -12,6 +12,8 @@ public class Graph	{
     private List<Edge> edgesList;
     private int vertices , edges;
 
+    private int[] inDegree;
+
     private LinkedList<Integer> adjList[];
 
     private LinkedList<Edge> adjListEdge[];
@@ -28,22 +30,20 @@ public class Graph	{
         this.edgesList = edgesList;
     }
 
+    public int[] getInDegree() {
+        return inDegree;
+    }
+
     public Graph(int vertices , int edges){
         this.vertices = vertices;
         this.edges = edges;
         edgesList = new ArrayList<Edge>(edges);
+        inDegree = new int[vertices];
     }
-
-    /*public Graph ( int vertices , int edges , LinkedList<Integer> adjList[] )   {
-        this.vertices = vertices;
-        this.edges = edges;
-        this.adjList = adjList;
-    }*/
 
     public List<Edge> getEdgesList(){
         return edgesList;
     }
-
     public LinkedList<Integer>[] getAdjList() {
         return adjList;
     }
@@ -74,4 +74,15 @@ public class Graph	{
 
     }
 
+    public void addEdgeAndIncrementIndegree( int source , int destination)  {
+
+        if ( adjList == null)
+            adjList = new LinkedList[vertices];
+
+        if ( adjList[source] == null)
+            adjList[source] = new LinkedList<>();
+
+        adjList[source].add(destination);
+        inDegree[destination]++;
+    }
 }
