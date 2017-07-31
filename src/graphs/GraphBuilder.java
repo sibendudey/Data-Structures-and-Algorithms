@@ -112,9 +112,9 @@ public class GraphBuilder {
     public static Graph createGraphWithAdjacencyListAndIndegree() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter no of vertices");
+        //System.out.println("Enter no of vertices");
         int noOfVertices = sc.nextInt();
-        System.out.println("Enter no of edges");
+        //System.out.println("Enter no of edges");
         int noOfEdges = sc.nextInt();
 
         Graph graph = new Graph(noOfVertices,noOfEdges);
@@ -126,7 +126,7 @@ public class GraphBuilder {
             //System.out.println("Enter destination");
             int destEdge = sc.nextInt();
 
-            graph.addEdgeAndIncrementIndegree(srcEdge , destEdge);
+            graph.addEdgeAndIncrementIndegree(srcEdge  - 1, destEdge - 1 );
         }
 
         return  graph;
