@@ -3,7 +3,7 @@ package arrays;
 public class MedianSortedArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		int arr1[] = new int[] {12,24,56,78,89};
 		int arr2[] = new int[] {13,67,89,100,101};
 		int median = getMedian(arr1 , arr2 , 0 , arr1.length - 1 , 0 , arr2.length - 1);
@@ -12,7 +12,7 @@ public class MedianSortedArray {
 	}
 
 	private static int getMedian(int[] arr1, int[] arr2, int low1, int high1, int low2 , int high2) {
-		// TODO Auto-generated method stub
+
 		int arraySize = high1 - low1 + 1;
 		if (arraySize == 0)
 			return -1;
