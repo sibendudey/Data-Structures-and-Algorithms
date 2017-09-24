@@ -2,6 +2,11 @@ package graphs.leetcode;
 
 import java.util.*;
 
+
+/***
+ * Time complexity: Maximum number of comparisons : 4 * 4 * 4 * $
+ */
+
 public class NearestTime {
 
     public static int max_diff = Integer.MAX_VALUE;
@@ -58,7 +63,6 @@ public class NearestTime {
             if ( pos == 2 && (digitList.get(i) > 5)) continue;
             if ( pos == 3 && (Integer.parseInt(curr.substring(2)) * 10 + digitList.get(i) > 59)) continue;
             findNearestTimeUtil(digitList , curr + digitList.get(i) , time , pos + 1);
-
         }
     }
 }
