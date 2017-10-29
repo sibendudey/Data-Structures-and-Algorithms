@@ -3,6 +3,7 @@ package dynamic.programming.geeksforgeeks;
 /***
  * This problem finds the min cost path for traversing from one
  * cell to another cell in a matrix
+ * Link : http://www.geeksforgeeks.org/dynamic-programming-set-6-min-cost-path/
  */
 public class MinCostPath {
     public static void main(String args[])  {

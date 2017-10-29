@@ -1,10 +1,13 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class TestVars {
 	public static void main(String [] args)	{
-			int i = 100000;
-			for ( long j = 0 ; j < 10000000000L ; j++)	{
-				int k = 2;
-			}
+			Set<Integer> integers = new HashSet<>();
+			integers.add(123);
+			integers.add(12);
+			integers.add(2);
+			System.out.println(integers);
 	}
 	
 	

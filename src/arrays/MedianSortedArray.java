@@ -8,7 +8,6 @@ public class MedianSortedArray {
 		int arr2[] = new int[] {13,67,89,100,101};
 		int median = getMedian(arr1 , arr2 , 0 , arr1.length - 1 , 0 , arr2.length - 1);
 		System.out.println(median);
-		
 	}
 
 	private static int getMedian(int[] arr1, int[] arr2, int low1, int high1, int low2 , int high2) {
@@ -31,6 +30,7 @@ public class MedianSortedArray {
 		if ( m1 == m2)	{
 			return m1;
 		}
+
 		if ( m2 > m1)	{
 				return getMedian(arr1, arr2 , (high1+low1)/2 , high2 , low2 ,(low2 + high2)/2 );
 		}
@@ -40,7 +40,7 @@ public class MedianSortedArray {
 	}
 
 	private static int median(int[] arr, int low1, int high1) {
-		// TODO Auto-generated method stub
+
 		int size = (high1 - low1) + 1;
 		if ( size % 2 == 0)
 			return (arr[(high1+low1)/2] + arr[(high1 + low1)/2 + 1])/2; 

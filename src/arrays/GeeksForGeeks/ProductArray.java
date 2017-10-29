@@ -3,6 +3,8 @@ package arrays.GeeksForGeeks;
 import java.util.Scanner;
 
 public class ProductArray {
+    static final double EPS = 0.000000001;
+
     public static void main(String args[])  {
         Scanner sc = new Scanner(System.in);
 
@@ -21,6 +23,7 @@ public class ProductArray {
             for ( int k = 0 ; k < prod.length ; k++)    {
                 System.out.print(prod[k] + " ");
             }
+
 
         }
 
