@@ -7,7 +7,7 @@ public class CommomUtilityFunc {
 		
 	}
 	
-	public void inOrderTraversal ( Node root)	{
+	public void inOrderTraversal (Node root)	{
 		if ( root == null)
 			return;
 		
@@ -15,5 +15,7 @@ public class CommomUtilityFunc {
 		System.out.print(root.data + " ");
 		inOrderTraversal(root.rightNode);
 	}
+
+
 
 }
