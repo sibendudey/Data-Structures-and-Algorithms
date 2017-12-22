@@ -1,8 +1,6 @@
 package trees.leetcode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 class Solution {
@@ -264,6 +262,87 @@ class Solution {
 
     }
 
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+
+        if ( t1 != null && t2 != null)  {
+             TreeNode root = new TreeNode(t1.val + t2.val);
+             root.left = mergeTrees(t1.left , t2.left);
+             root.right = mergeTrees(t1.right, t2.right);
+             return root;
+        }
+
+        if ( t1 == null && t2 == null)
+            return null;
+
+        if ( t1 == null && t2 != null)
+            return t2;
+        else
+            return t1;
+
+    }
+
+    public String minWindow(String s, String t) {
+        if ( t.length() == 0)
+            return "";
+
+        Map<Character, Integer> lastPos  = new TreeMap<>();
+
+        for ( int i = 0 ; i < t.length() ; i++) {
+            char curr = t.charAt(i);
+            lastPos.putIfAbsent(curr, 0);
+            lastPos.put(curr , lastPos.get(curr) - 1);
+        }
+
+        int i = 0;
+        while( i < s.length() && lastPos.get(s.charAt(i)) == null ) i++;
+        int minLength = Integer.MAX_VALUE;
+        String minWindow = "";
+        for ( int j = i ; i < s.length() ;) {
+            if(allCharactersPresent(lastPos))    {
+                if (  i - j + 1 < minLength)    {
+                    minWindow = s.substring(j , i);
+                }
+            }
+            else{
+
+                lastPos.put(s.charAt(j), lastPos.get(s.charAt(j)) - 1);
+
+
+            }
+        }
+
+        return minWindow;
+
+    }
+
+    private boolean allCharactersPresent(Map<Character, Integer> lastPos) {
+        return !lastPos.entrySet().stream()
+                .anyMatch((characterIntegerEntry -> characterIntegerEntry.getValue() != 0));
+    }
+
+    public int minimumTransistors(int arr[], int k) {
+        Arrays.sort(arr);
+
+        int count = 0;
+        for ( int i = 0 ; i < arr.length ;) {
+
+            count++;
+            int start = arr[i];
+
+            int j = start;
+
+            while ( i < arr.length && arr[i] <= j + k ) {
+                i++;
+            }
+
+            int mid = --i;
+
+            while ( i < arr.length && arr[i] <= arr[mid] + k ) i++;
+        }
+
+        return count;
+    }
+
     public static void main(String args[]) {
 //
 //        TreeNode root = new TreeNode(2);
@@ -333,19 +412,26 @@ class Solution {
 //
 //        System.out.println(new Solution().isSameTree(root2, root3));
 
-        TreeNode root = new TreeNode(4);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(7);
+//        TreeNode root = new TreeNode(4);
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(7);
+//
+//        root.left.left = new TreeNode(1);
+//        root.left.right = new TreeNode(3);
+//
+//        root.right.left = new TreeNode(6);
+//        root.right.right = new TreeNode(9);
+//
+//        System.out.println(new Solution().diameterOfBinaryTree(root));
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int[] x = new int[n];
+        for(int x_i=0; x_i < n; x_i++){
+            x[x_i] = in.nextInt();
+        }
 
-        root.left.left = new TreeNode(1);
-        root.left.right = new TreeNode(3);
-
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(9);
-
-
-        System.out.println(new Solution().diameterOfBinaryTree(root));
-
+        System.out.println(new Solution().minimumTransistors(x , k));
 
     }
 
