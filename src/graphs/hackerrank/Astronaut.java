@@ -1,7 +1,6 @@
 package graphs.hackerrank;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class Astronaut {
     static Long journeyToMoon(int n, int[][] astronaut) {
