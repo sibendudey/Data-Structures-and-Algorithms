@@ -9,7 +9,6 @@ public class Ranking {
         ranking(arr1);
         int arr2[] = new int[]{20,30,10};
         ranking(arr2);
-
     }
 
     private static void ranking(int[] arr) {
