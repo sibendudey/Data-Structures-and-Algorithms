@@ -56,23 +56,4 @@ public class OptimalParenthesize {
             return sb.toString();
         }
     }
-
-    public int findLongestChain(int[][] pairs) {
-        Arrays.sort(pairs, (a, b) -> a[0] - b[0]);
-        int dp[] = new int[pairs.length];
-        int max = 0;
-        for (int i = 0; i < pairs.length; i++)
-            dp[i] = 1;
-        for (int i = 1; i < pairs.length; i++) {
-            int[] pair1 = pairs[i];
-            for (int j = 0; j < i; j++) {
-                int[] pair2 = pairs[j];
-                if (pair2[1] < pair1[0]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
-                    max = Math.max(max, dp[i]);
-                }
-            }
-        }
-        return max;
-    }
 }
