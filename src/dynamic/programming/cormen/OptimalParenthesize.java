@@ -14,7 +14,6 @@ public class OptimalParenthesize {
     }
 
     public String optimalParenthesis(int[] dimensions) {
-        String str = "";
         int cost[][] = new int[dimensions.length][dimensions.length];
         int trace[][] = new int[dimensions.length][dimensions.length];
         for (int i = 0; i < dimensions.length; i++)
